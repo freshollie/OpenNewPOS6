@@ -1,0 +1,18 @@
+
+table tr td{
+    border: 1px solid black;
+}
+
+table.fixed { table-layout:fixed; 
+    
+    }
+              
+table.fixed td { 
+    overflow: hidden; 
+    width:20px;
+    }
+    
+table.fixed tr {
+    height:20px;
+    overflow: hidden;
+}
