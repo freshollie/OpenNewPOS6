@@ -9,10 +9,22 @@ table.fixed { table-layout:fixed;
               
 table.fixed td { 
     overflow: hidden; 
-    width:20px;
+    width:70px;
     }
     
 table.fixed tr {
-    height:20px;
+    height:70px;
     overflow: hidden;
+}
+
+select.currentOrder{
+    size:"30";
+    height:400px;
+    width:200px;
+}
+
+select.previousOrders{
+    size:10;
+    height:200px;
+    width:200px;
 }

@@ -1,22 +1,39 @@
 
+function Order(objectId){
+    var self = this;
+    self.items =[];
+    self.objectId = objectId;
+    
+    self.addItem = function(item){
+        self.items.append(item);
+        self.updateDisplay();
+    }
+    
+    self.updateDisplay = function(){
+    }
+    
+};
+
 function Screen(){
-    buttons = []
+    var self = this;
+    
+    self.buttons = []
+    self.hideAll = function(){
         
-    hideAll = function(){
     }
 }
 
 function Till(){
+    var self = this;
     
-    this.setScreen = function(screen){
-        this.screen.hideAll();
-        this.screen  = screen;
-        this.screen.showAll();
+    self.setScreen = function(screen){
+        self.screen.hideAll();
+        self.screen  = screen;
+        self.screen.showAll();
     };
     
-    this.makeButtonTable = function(){
+    self.makeButtonTable = function(){
         table = $('#buttons').get(0);
-        console.log(table)
         
         for (i = 0; i < 9; i++) { 
             table.insertRow();
@@ -30,12 +47,12 @@ function Till(){
         
     };
     
-    this.init = function(){
-        this.screen = new Screen();
-        this.makeButtonTable();
+    self.init = function(){
+        self.screen = new Screen();
+        self.makeButtonTable();
     };
 };
 
 till = new Till();
 
-$(document).ready(till.makeButtonTable)
+$(document).ready(till.init)
