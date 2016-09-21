@@ -1,3 +1,5 @@
+function Button(objectId, callback){
+}
 
 function Order(objectId){
     var self = this;
@@ -21,6 +23,8 @@ function Screen(){
     self.hideAll = function(){
         
     }
+    
+    var Main = [];
 }
 
 function Till(){
@@ -32,24 +36,40 @@ function Till(){
         self.screen.showAll();
     };
     
-    self.makeButtonTable = function(){
-        table = $('#buttons').get(0);
+    self.makeButtonTables = function(){
+        table = $('#orderTakingScreen').get(0);
+        console.log(table.rows.length);
         
-        for (i = 0; i < 9; i++) { 
+        for (i = 0; i<6; i++) {
+            for (j = 0; j<10 ; j++) { 
+                table.rows[table.rows.length-1].insertCell();
+            };
+            
             table.insertRow();
-        }
+        };
         
-        for (i = 0; i<9 ; i++) { 
-            for (j = 0; j<9 ; j++) { 
-                table.rows[i].insertCell()
-            }
-        }
+        for (j = 0; j<10 ; j++) { 
+            table.rows[table.rows.length-1].insertCell()
+        };
+
+        row = $('#topButtonsRowOne').get(0);
+
+        for (i = 0; i<10; i++) { 
+            row.insertCell()
+        };
+
+        row = $('#topButtonsRowTwo').get(0);
+        
+        for (i = 0; i<10; i++) { 
+            row.insertCell()
+        };
+        
         
     };
     
     self.init = function(){
         self.screen = new Screen();
-        self.makeButtonTable();
+        self.makeButtonTables();
     };
 };
 
