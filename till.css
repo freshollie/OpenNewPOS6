@@ -45,15 +45,18 @@
     background-image: -ms-linear-gradient(top, #DBDBDB, #D0D0D0);
     background-image: -o-linear-gradient(top, #DBDBDB, #D0D0D0);
     background-image: linear-gradient(to bottom, #DBDBDB, #D0D0D0);
-    -webkit-border-radius: 28;
-    -moz-border-radius: 28;
-    border-radius: 28px;
+    -webkit-border-radius: 50;
+    -moz-border-radius: 50;
+    border-radius: 50px;
     text-shadow: 1px 1px 3px #ffffff;
     font-family: Arial;
     color: #000000;
-    font-size: 40px;
-    padding: 9px 20px 9px 19px;
+    font-size: 46px;
+    padding: 3px 16px 3px 16px;
     text-decoration: none;
+    font-weight: bold;
+	display: block;
+	margin:auto;
 }
 
 .numberButton:hover {
@@ -78,7 +81,8 @@ table.buttonTable { table-layout:fixed;
     }
               
 table.buttonTable td { 
-    overflow: hidden; 
+    overflow: hidden;
+    text-align: "center";
     width:70px;
     }
     
